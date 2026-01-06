@@ -1,0 +1,119 @@
+import React, { useState, useEffect } from 'react'
+import AnimatedContent from './AnimatedContent';
+
+const WeekPlan = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  // Updated to 6 images
+  const images = [
+    { src: '/GanttChart_w1.jpg', alt: 'Week Plan 1' },
+    { src: '/GanttChart_w2.jpg', alt: 'Week Plan 2' },
+    { src: '/GanttChart_w3.jpg', alt: 'Week Plan 3' },
+    { src: '/GanttChart_w4.jpg', alt: 'Week Plan 4' },
+    { src: '/GanttChart_w5.jpg', alt: 'Week Plan 5' },
+    { src: '/GanttChart_w6.jpg', alt: 'Week Plan 6' }
+  ];
+
+  // Auto-advance carousel every 5 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [images.length]);
+
+  const goToSlide = (index) => {
+    setCurrentIndex(index);
+  };
+
+  const goToPrevious = () => {
+    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  const goToNext = () => {
+    setCurrentIndex((prev) => (prev + 1) % images.length);
+  };
+
+  return (
+    <AnimatedContent
+            distance={10}
+            direction="vertical"
+            reverse={false}
+            duration={1.0}
+            ease="power3.out"
+            initialOpacity={0.2}
+            animateOpacity
+            scale={0.9}
+            threshold={0.2}
+            delay={0.15}
+            >
+        <div id='weekly-plan' className='bg-gradient-to-b from-[rgb(123,123,123)] to-[#2e2e2e] rounded-lg 
+                        my-10 mx-5 sm:max-xl:mx-20 xl:mx-30 2xl:mx-80
+                        flex flex-col items-center justify-center py-8 px-4'>
+            <h1 className="text-3xl font-bold text-white mb-6">Weekly Plan</h1>
+            <p className='text-sm font-bold text-violet-300 mb-4'>
+              {currentIndex + 1} / {images.length}
+            </p>
+            
+            <div className='relative w-full max-w-4xl'>
+                {/* Carousel Container */}
+                <div className='relative overflow-hidden rounded-4xl bg-[#ffffff09] h-[200px] md:h-[400px] lg:h-[550px]'  >
+                    <div 
+                        className='flex transition-transform duration-500 ease-in-out h-full'
+                        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+                    >
+                        {images.map((image, index) => (
+                            <div key={index} className='min-w-full h-full flex items-center justify-center p-4'>
+                                <img 
+                                    src={image.src} 
+                                    alt={image.alt}
+                                    className='max-w-full max-h-full object-contain rounded-lg'
+                                />
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Previous Button */}
+                    <button
+                        onClick={goToPrevious}
+                        className='absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all duration-300 hover:scale-110 z-10'
+                        aria-label='Previous slide'
+                    >
+                        <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                            <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M15 19l-7-7 7-7' />
+                        </svg>
+                    </button>
+
+                    {/* Next Button */}
+                    <button
+                        onClick={goToNext}
+                        className='absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all duration-300 hover:scale-110 z-10'
+                        aria-label='Next slide'
+                    >
+                        <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+                            <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M9 5l7 7-7 7' />
+                        </svg>
+                    </button>
+                </div>
+
+                {/* Dots Indicator */}
+                <div className='flex justify-center gap-2 mt-4 flex-wrap'>
+                    {images.map((_, index) => (
+                        <button
+                            key={index}
+                            onClick={() => goToSlide(index)}
+                            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                                index === currentIndex 
+                                    ? 'bg-violet-500 w-8' 
+                                    : 'bg-gray-400 hover:bg-gray-300'
+                            }`}
+                            aria-label={`Go to slide ${index + 1}`}
+                        />
+                    ))}
+                </div>
+            </div>
+        </div>
+    </AnimatedContent>
+  )
+}
+
+export default WeekPlan
