@@ -29,14 +29,14 @@ const Documentation = () => {
       id: "architecture",
       title: "Architecture",
       content: "Here is the architecture documentation...",
-      pdfPath: "/Arch1.pdf",
+      pdfPath: "${import.meta.env.BASE_URL}Arch1.pdf",
       // Add 5 carousel images for Architecture section
       carouselImages: [
-        { src: '/basicArchitectureV1.png', alt: 'Architecture Diagram 1' },
-        { src: '/basicArchitectureV2.png', alt: 'Architecture Diagram 2' },
-        { src: '/basicArchitectureV3.png', alt: 'Architecture Diagram 3' },
-        { src: '/basicArchitectureV4.png', alt: 'Architecture Diagram 4' },
-        { src: '/activityDiagram.png', alt: 'Architecture Diagram 5' }
+        { src: '${import.meta.env.BASE_URL}basicArchitectureV1.png', alt: 'Architecture Diagram 1' },
+        { src: '${import.meta.env.BASE_URL}basicArchitectureV2.png', alt: 'Architecture Diagram 2' },
+        { src: '${import.meta.env.BASE_URL}basicArchitectureV3.png', alt: 'Architecture Diagram 3' },
+        { src: '${import.meta.env.BASE_URL}basicArchitectureV4.png', alt: 'Architecture Diagram 4' },
+        { src: '${import.meta.env.BASE_URL}activityDiagram.png', alt: 'Architecture Diagram 5' }
       ]
     },
     {

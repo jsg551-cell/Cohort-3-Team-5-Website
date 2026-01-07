@@ -4,14 +4,17 @@ import AnimatedContent from './AnimatedContent';
 const WeekPlan = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   // Updated to 6 images
-  const images = [
-    { src: '/GanttChart_w1.jpg', alt: 'Week Plan 1' },
-    { src: '/GanttChart_w2.jpg', alt: 'Week Plan 2' },
-    { src: '/GanttChart_w3.jpg', alt: 'Week Plan 3' },
-    { src: '/GanttChart_w4.jpg', alt: 'Week Plan 4' },
-    { src: '/GanttChart_w5.jpg', alt: 'Week Plan 5' },
-    { src: '/GanttChart_w6.jpg', alt: 'Week Plan 6' }
-  ];
+const base = import.meta.env.BASE_URL;
+
+const images = [
+  { src: `${import.meta.env.BASE_URL}GanttChart_w1.jpg`, alt: 'Week Plan 1' },
+  { src: `${import.meta.env.BASE_URL}GanttChart_w2.jpg`, alt: 'Week Plan 2' },
+  { src: `${import.meta.env.BASE_URL}GanttChart_w3.jpg`, alt: 'Week Plan 3' },
+  { src: `${import.meta.env.BASE_URL}GanttChart_w4.jpg`, alt: 'Week Plan 4' },
+  { src: `${import.meta.env.BASE_URL}GanttChart_w5.jpg`, alt: 'Week Plan 5' },
+  { src: `${import.meta.env.BASE_URL}GanttChart_w6.jpg`, alt: 'Week Plan 6' }
+];
+
 
   // Auto-advance carousel every 5 seconds
   useEffect(() => {

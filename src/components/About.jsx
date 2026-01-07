@@ -5,14 +5,14 @@ const About = () => {
   const [copiedEmail, setCopiedEmail] = useState(null);
 
   const teamMembers = [
-    { name: 'Harry Turner', email: 'cbk508@york.ac.uk' },
-    { name: 'Arnav Jamidar', email: 'bwj516@york.ac.uk' },
-    { name: 'Callum Newton', email: 'cnl533@york.ac.uk' },
-    { name: 'Joshua Wainwright', email: 'vgt514@york.ac.uk' },
-    { name: 'Daniel Thwaites', email: 'zfk509@york.ac.uk' },
-    { name: 'Piotr Koziol', email: 'jmb672@york.ac.uk' },
-    { name: 'Sarvesh Sridhar', email: 'qgf510@york.ac.uk' },
-    { name: 'Harrison Barrans', email: 'phz516@york.ac.uk' }
+    { name: 'Oakley Fiddler', email: 'cfk518@york.ac.uk' },
+    { name: 'Matt Ritchie', email: 'jsg551@york.ac.uk' },
+    { name: 'Amity Van Rooyen', email: 'kqv519@york.ac.uk' },
+    { name: 'Cassian Kanhukamwe', email: 'mfl537@york.ac.uk' },
+    { name: 'Dhruv Madan', email: 'scf537@york.ac.uk' },
+    { name: 'Gilda Grimes', email: 'srq520@york.ac.uk' },
+    { name: 'Jerry Anish', email: 'tms556@york.ac.uk' },
+    { name: 'Ruby Brown', email: 'tdv513@york.ac.uk' }
   ];
 
   const handleCopyEmail = (email) => {
