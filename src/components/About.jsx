@@ -50,7 +50,7 @@ const About = () => {
 
                 <div className='flex flex-row gap-1 items-center pt-9'>
                     <h1 className='max-lg:text-md lg:text-3xl text-white font-bold pl-10 '>Github</h1>
-                    <img className='max-lg:size-[20px] lg:size-[30px]' src='${base}github-icon.png' alt='github'></img>
+                    <img className='max-lg:size-[20px] lg:size-[30px]' src={`${base}github-icon.png`} alt='github'></img>
                 </div>
                 <button 
                   className='bg-violet-600 text-white max-lg:text-xs lg:text-base font-bold py-2 px-2 rounded ml-10 max-lg:mt-1 lg:mt-4 hover:bg-violet-700 hover:cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out'
