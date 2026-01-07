@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import CardSwap, { Card } from './CardSwap'
 import AnimatedContent from './AnimatedContent'
+const base = import.meta.env.BASE_URL;
+
 
 const Features = () => {
     const [isMobile, setIsMobile] = useState(false);
@@ -65,15 +67,15 @@ const Features = () => {
                         >
                             <Card>
                                 <h3 className='text-white font-bold text-2xl pl-4 py-2'>Maze</h3>
-                                <img className='w-[400px] h-[350px] rounded-b-xl' src='/End-Tile.png' alt='Maze part 1' />
+                                <img className='w-[400px] h-[350px] rounded-b-xl' src='${base}End-Tile.png' alt='Maze part 1' />
                             </Card>
                             <Card>
                                 <h3 className='text-white font-bold text-2xl pl-4 py-2'>Events</h3>
-                                <img className='w-[400px] h-[350px] rounded-b-xl' src='/Moving-Quicker.png' alt='Maze part 2' />
+                                <img className='w-[400px] h-[350px] rounded-b-xl' src='${base}Moving-Quicker.png' alt='Maze part 2' />
                             </Card>
                             <Card>
                                 <h3 className='text-white font-bold text-2xl pl-4 py-2'>Clean Code</h3>
-                                <img className='w-[400px] h-[350px] rounded-b-xl' src='/code.png' alt='Maze part 3' />
+                                <img className='w-[400px] h-[350px] rounded-b-xl' src='${base}code.png' alt='Maze part 3' />
                             </Card>
                         </CardSwap>
                     </div>

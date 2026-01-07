@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import AnimatedContent from './AnimatedContent';
+const base = import.meta.env.BASE_URL;
+
 
 const WeekPlan = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -7,12 +9,12 @@ const WeekPlan = () => {
 const base = import.meta.env.BASE_URL;
 
 const images = [
-  { src: `${import.meta.env.BASE_URL}GanttChart_w1.jpg`, alt: 'Week Plan 1' },
-  { src: `${import.meta.env.BASE_URL}GanttChart_w2.jpg`, alt: 'Week Plan 2' },
-  { src: `${import.meta.env.BASE_URL}GanttChart_w3.jpg`, alt: 'Week Plan 3' },
-  { src: `${import.meta.env.BASE_URL}GanttChart_w4.jpg`, alt: 'Week Plan 4' },
-  { src: `${import.meta.env.BASE_URL}GanttChart_w5.jpg`, alt: 'Week Plan 5' },
-  { src: `${import.meta.env.BASE_URL}GanttChart_w6.jpg`, alt: 'Week Plan 6' }
+  { src: `${base}GanttChart_w1.jpg`, alt: 'Week Plan 1' },
+  { src: `${base}GanttChart_w2.jpg`, alt: 'Week Plan 2' },
+  { src: `${base}GanttChart_w3.jpg`, alt: 'Week Plan 3' },
+  { src: `${base}GanttChart_w4.jpg`, alt: 'Week Plan 4' },
+  { src: `${base}GanttChart_w5.jpg`, alt: 'Week Plan 5' },
+  { src: `${base}GanttChart_w6.jpg`, alt: 'Week Plan 6' }
 ];
 
 

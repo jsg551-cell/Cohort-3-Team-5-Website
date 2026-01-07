@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import GooeyNav from './GooeyNav';
 import FadeContent from './FadeContent';
+const base = import.meta.env.BASE_URL;
 
 const Documentation = () => {
   const [activeSection, setActiveSection] = useState(0);
@@ -19,45 +20,44 @@ const Documentation = () => {
   ];
 
   const sections = [
-    {
-      id: "requirements",
-      title: "Requirements",
-      content: "Here is the requirements documentation...",
-      pdfPath: "/Req1.pdf"
-    },
-    {
-      id: "architecture",
-      title: "Architecture",
-      content: "Here is the architecture documentation...",
-      pdfPath: "${import.meta.env.BASE_URL}Arch1.pdf",
-      // Add 5 carousel images for Architecture section
-      carouselImages: [
-        { src: '${import.meta.env.BASE_URL}basicArchitectureV1.png', alt: 'Architecture Diagram 1' },
-        { src: '${import.meta.env.BASE_URL}basicArchitectureV2.png', alt: 'Architecture Diagram 2' },
-        { src: '${import.meta.env.BASE_URL}basicArchitectureV3.png', alt: 'Architecture Diagram 3' },
-        { src: '${import.meta.env.BASE_URL}basicArchitectureV4.png', alt: 'Architecture Diagram 4' },
-        { src: '${import.meta.env.BASE_URL}activityDiagram.png', alt: 'Architecture Diagram 5' }
-      ]
-    },
-    {
-      id: "method",
-      title: "Method Selection and Planning",
-      content: "Here is the method selection documentation...",
-      pdfPath: "/Plan1.pdf"
-    },
-    {
-      id: "risk",
-      title: "Risk Assessment and Mitigation",
-      content: "Here is the risk assessment documentation...",
-      pdfPath: "/Risk1.pdf"
-    },
-    {
-      id: "implementation",
-      title: "Implementation",
-      content: "Here is the implementation documentation...",
-      pdfPath: "/Impl1.pdf"
-    }
-  ];
+  {
+    id: "requirements",
+    title: "Requirements",
+    content: "Here is the requirements documentation...",
+    pdfPath: `${base}Req1.pdf`
+  },
+  {
+    id: "architecture",
+    title: "Architecture",
+    content: "Here is the architecture documentation...",
+    pdfPath: `${base}Arch1.pdf`,
+    carouselImages: [
+      { src: `${base}basicArchitectureV1.png`, alt: "Architecture Diagram 1" },
+      { src: `${base}basicArchitectureV2.png`, alt: "Architecture Diagram 2" },
+      { src: `${base}basicArchitectureV3.png`, alt: "Architecture Diagram 3" },
+      { src: `${base}basicArchitectureV4.png`, alt: "Architecture Diagram 4" },
+      { src: `${base}activityDiagram.png`, alt: "Architecture Diagram 5" }
+    ]
+  },
+  {
+    id: "method",
+    title: "Method Selection and Planning",
+    content: "Here is the method selection documentation...",
+    pdfPath: `${base}Plan1.pdf`
+  },
+  {
+    id: "risk",
+    title: "Risk Assessment and Mitigation",
+    content: "Here is the risk assessment documentation...",
+    pdfPath: `${base}Risk1.pdf`
+  },
+  {
+    id: "implementation",
+    title: "Implementation",
+    content: "Here is the implementation documentation...",
+    pdfPath: `${base}Impl1.pdf`
+  }
+];
 
   // Listen for hash changes and update active section
   useEffect(() => {
