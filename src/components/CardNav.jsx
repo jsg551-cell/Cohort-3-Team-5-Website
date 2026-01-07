@@ -2,6 +2,8 @@ import { useLayoutEffect, useRef, useState, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { GoArrowUpRight } from 'react-icons/go';
 import ElectricBorder from './ElectricBorder';
+const base = import.meta.env.BASE_URL;
+
 
 /**
  * CardNav
@@ -20,7 +22,7 @@ const CardNav = ({
   buttonBgColor,                // CTA button background color (inline style overrides class)
   buttonTextColor,              // CTA button text color (inline style)
   // Place the file in /public (e.g., /public/Req1.pdf) so it’s served statically
-  downloadUrl = '${import.meta.env.BASE_URL}/Maze-Game-1.0.0.jar',
+  downloadUrl = '${base}/Maze-Game-1.0.0.jar',
   // Optional: specify a filename; if empty, browser derives from URL
   downloadFilename = ''
 }) => {
