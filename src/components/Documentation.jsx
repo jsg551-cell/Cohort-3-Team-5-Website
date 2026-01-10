@@ -46,13 +46,13 @@ const Documentation = () => {
   },
   {
     id: "method",
-    title: "Method Selection and Planning",
+    title: "Method Selection & Planning",
     content: "Here is the method selection documentation...",
     pdfPath: `${base}Plan1.pdf`
   },
   {
     id: "risk",
-    title: "Risk Assessment and Mitigation",
+    title: "Risk Assessment & Mitigation",
     content: "Here is the risk assessment documentation...",
     pdfPath: `${base}Risk1.pdf`
   },
@@ -88,7 +88,7 @@ const Documentation = () => {
   },
   {
     id: "continuous",
-    title: "Continuous Integration",
+    title: "CI",
     content: "Here is the continuous integration documentation...",
     pdfPath: `${base}CI2.pdf`
   }
