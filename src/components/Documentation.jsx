@@ -17,6 +17,11 @@ const Documentation = () => {
     { label: "Method selection and planning", href: "#method" },
     { label: "Risk assessment and mitigation", href: "#risk" },
     { label: "Implementation", href: "#implementation" }
+    { label: "Change report", href: "#change" }
+    { label: "Implementation 2", href: "#implementation2" }
+    { label: "Testing", href: "#testing" }
+    { label: "User Evaluation", href: "#user" }
+    { label: "Continuous intergration", href: "#continuous" }
   ];
 
   const sections = [
@@ -56,6 +61,36 @@ const Documentation = () => {
     title: "Implementation",
     content: "Here is the implementation documentation...",
     pdfPath: `${base}Impl1.pdf`
+  }
+  {
+    id: "change",
+    title: "Change Report",
+    content: "Here is the change report documentation...",
+    pdfPath: `${base}Change2.pdf`
+  }
+  {
+    id: "implementation2",
+    title: "Implementation 2",
+    content: "Here is the implementation 2 documentation...",
+    pdfPath: `${base}Impl2.pdf`
+  }
+  {
+    id: "testing",
+    title: "Testing",
+    content: "Here is the testing documentation...",
+    pdfPath: `${base}Test2.pdf`
+  }
+  {
+    id: "user",
+    title: "User Evaluation",
+    content: "Here is the user evaluation documentation...",
+    pdfPath: `${base}Eval2.pdf`
+  }
+  {
+    id: "continuous",
+    title: "Continuous Integration",
+    content: "Here is the continuous integration documentation...",
+    pdfPath: `${base}CI2.pdf`
   }
 ];
 
