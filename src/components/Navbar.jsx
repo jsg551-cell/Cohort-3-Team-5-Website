@@ -23,11 +23,11 @@ const Navbar = () => {
         { label: "Architecture", ariaLabel: "Architecture", href: '#architecture' },
         { label: "Method selection and planning", ariaLabel: "Method selection and planning", href: '#method' },
         { label: "Risk assessment and mitigation", ariaLabel: "Risk assessment and mitigation", href: '#risk' },
-        { label: "Implementation", ariaLabel: "Implementation", href: '#implementation' }
-        { label: "Change Report", ariaLabel: "Change Report", href: '#change' }
-        { label: "Implementation 2", ariaLabel: "Implementation 2", href: '#implementation2' }
-        { label: "Testing", ariaLabel: "Testing", href: '#testing' }
-        { label: "User Evaluation", ariaLabel: "User Evaluation", href: '#user' }
+        { label: "Implementation", ariaLabel: "Implementation", href: '#implementation' },
+        { label: "Change Report", ariaLabel: "Change Report", href: '#change' },
+        { label: "Implementation 2", ariaLabel: "Implementation 2", href: '#implementation2' },
+        { label: "Testing", ariaLabel: "Testing", href: '#testing' },
+        { label: "User Evaluation", ariaLabel: "User Evaluation", href: '#user' },
         { label: "Continuous Integration", ariaLabel: "Continuous Integration", href: '#continuous' }
       ]
     },
