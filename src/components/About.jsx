@@ -54,7 +54,7 @@ const About = () => {
                 </div>
                 <button 
                   className='bg-violet-600 text-white max-lg:text-xs lg:text-base font-bold py-2 px-2 rounded ml-10 max-lg:mt-1 lg:mt-4 hover:bg-violet-700 hover:cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out'
-                  onClick={() => window.open('https://github.com/uoy-eng1-3-11', '_blank')}
+                  onClick={() => window.open('https://github.com/oakleysjf/Brownfield', '_blank')}
                 >
                   View Project on GitHub
                 </button>

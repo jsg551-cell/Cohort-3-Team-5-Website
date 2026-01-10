@@ -14,14 +14,14 @@ const Documentation = () => {
   const items = [
     { label: "Requirements", href: "#requirements" },
     { label: "Architecture", href: "#architecture" },
-    { label: "Method selection and planning", href: "#method" },
-    { label: "Risk assessment and mitigation", href: "#risk" },
+    { label: "Method selection & planning", href: "#method" },
+    { label: "Risk assessment & mitigation", href: "#risk" },
     { label: "Implementation", href: "#implementation" },
     { label: "Change report", href: "#change" },
     { label: "Implementation 2", href: "#implementation2" },
     { label: "Testing", href: "#testing" },
     { label: "User Evaluation", href: "#user" },
-    { label: "Continuous intergration", href: "#continuous" }
+    { label: "CI", href: "#continuous" }
   ];
 
   const sections = [
